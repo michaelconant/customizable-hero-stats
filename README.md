@@ -1,4 +1,4 @@
-# Customizable Hero Stats
+# Customizable Hero Stats Mod for "Shape of Dreams"
 Adds menu customization settings and an option to start each run with the menu already open.
 
 ## Features
@@ -10,4 +10,4 @@ Note: Each of these features can be enabled/disabled in the mod settings menu.
 
 Please let me know if there is any bugs or features you would like to see added to the mod.
 
-Mod's GitHub Page: [https://github.com/michaelconant/customizable-hero-stats](github.com/michaelconant/customizable-hero-stats)
+Mod's Steam Page: [steamcommunity.com/sharedfiles/filedetails/?id=3625449505](https://steamcommunity.com/sharedfiles/filedetails/?id=3625449505)
