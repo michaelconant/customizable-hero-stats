@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
-using HarmonyLib;
-using UnityEngine.SceneManagement;
 
 namespace CustomizableHeroStats
 {
@@ -13,19 +8,18 @@ namespace CustomizableHeroStats
     public class CustomizableHeroStats : ModBehaviour
     {
         public CustomizableHeroStatsConfig config = new CustomizableHeroStatsConfig();
+        //"public static" prevents the config from showing up in game, so I use this static duplicate to access config settings within patches
         public static CustomizableHeroStatsConfig configStatic;
 
+        //references that are updated each time a new run is started
+        //used for updating UI components when settings are changed mid run
         public static UI_InGame_HeroDetailWindow heroDetailMenu;
+        public static CanvasGroup stardustCanvasGroup;
         
         private void Awake()
         {
-            // Metadata of your mod is stored in this.about
             Debug.Log("[" + mod.metadata.name + "] Hello! I'm loaded!");
-            
             configStatic = config;
-            
-            // If you need to patch with Harmony, you can use this.harmony to access the Harmony instance for your mod.
-            // It will be created with your mod's id automatically, the first time you access the property.
             harmony.PatchAll();
         }
 
@@ -40,25 +34,43 @@ namespace CustomizableHeroStats
         {
             Debug.Log("[" + mod.metadata.name + "] Config changed!");
             configStatic = config;
-            UpdateComponents();
-        }
+            UpdateHeroDetailComponents();
 
-        public static void UpdateComponents()
-        {
-            heroDetailMenu.alwaysShowToggle.isChecked = CustomizableHeroStats.configStatic.startOpen;
-            heroDetailMenu.alwaysShowToggle.gameObject.SetActive(CustomizableHeroStats.configStatic.showToggle);
-            
             try
             {
-                Debug.Log("[CustomizableHeroStats] Attempting to customize menu on awake!");
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Stardust) Attempting to update stardust visibility");
+                stardustCanvasGroup.alpha = CustomizableHeroStats.configStatic.alwaysShowStardust ? 1f : 0f;
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Stardust) SUCCESSFULLY updated stardust visibility!");
+            }
+            catch
+            {
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Stardust) FAILED to update stardust visibility. Ignore this if you not currently in a run (the components don't exist yet).");
+            }
+        }
+
+        public static void UpdateHeroDetailComponents()
+        {
+            Debug.Log("[CustomizableHeroStats] (UpdateHeroDetailComponents) Updating menus to fit new settings");
+            
+            //try to change
+            try
+            {
+                //lock button state and visibility
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.LockButton) Attempting to update lock button state and visibility!");
+                heroDetailMenu.alwaysShowToggle.isChecked = CustomizableHeroStats.configStatic.startOpen;
+                heroDetailMenu.alwaysShowToggle.gameObject.SetActive(CustomizableHeroStats.configStatic.showToggle);
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.LockButton) SUCCESSFULLY updated lock button state and visibility!");
                 
-                //shadow
+                
+                //Background shadow and box
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Background) Attempting to update background shadow and box visibility!");
                 heroDetailMenu.transform.GetChild(0).gameObject.SetActive(CustomizableHeroStats.configStatic.showShadow);
-                
-                //background
                 heroDetailMenu.transform.GetChild(1).gameObject.SetActive(CustomizableHeroStats.configStatic.showBackground);
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Background) SUCCESSFULLY updated background shadow and box visibility!");
+                
                 
                 //border
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Cosmetics) Attempting to update border");
                 switch (CustomizableHeroStats.configStatic.borderType)
                 {
                     case Border.None:
@@ -74,8 +86,11 @@ namespace CustomizableHeroStats
                         heroDetailMenu.transform.GetChild(3).gameObject.SetActive(false);
                         break;
                 }
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.Cosmetics) SUCCESSFULLY updated border!");
+                
                 
                 //stats
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.IndividualStats) Attempting to update individual stats!");
                 heroDetailMenu.transform.GetChild(4).gameObject.SetActive(CustomizableHeroStats.configStatic.showHealth);
                 heroDetailMenu.transform.GetChild(5).gameObject.SetActive(CustomizableHeroStats.configStatic.showArmor);
                 heroDetailMenu.transform.GetChild(6).gameObject.SetActive(CustomizableHeroStats.configStatic.showAttackDamage);
@@ -85,13 +100,14 @@ namespace CustomizableHeroStats
                 heroDetailMenu.transform.GetChild(10).gameObject.SetActive(CustomizableHeroStats.configStatic.showCriticalStrikeChance);
                 heroDetailMenu.transform.GetChild(11).gameObject.SetActive(CustomizableHeroStats.configStatic.showFireAmp);
                 heroDetailMenu.transform.GetChild(12).gameObject.SetActive(CustomizableHeroStats.configStatic.showMovementSpeed);
-                
-                Debug.Log("[CustomizableHeroStats] SUCCESSFULLY customize menu on awake!");
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents.IndividualStats) SUCCESSFULLY updated individual stats!");
             }
-            catch
+            catch (Exception ex)
             {
-                Debug.Log("[CustomizableHeroStats] FAILED to customize menu on awake.");
+                Debug.Log("[CustomizableHeroStats] (UpdateComponents) FAILED to update all components. Ignore this if you not currently in a run (the components don't exist yet).");
             }
+            
+            Debug.Log("[CustomizableHeroStats] (UpdateComponents) SUCCESSFULLY updated all components.");
         }
     }
 }

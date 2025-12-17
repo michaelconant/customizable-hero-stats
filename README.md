@@ -4,7 +4,8 @@ Adds menu customization settings and an option to start each run with the menu a
 ## Features
 Note: Each of these features can be enabled/disabled in the mod settings menu.
 * Start with hero details menu open
-* Show/Hide Menu Elements (Shadow, Background Box, Border, Lock Button)
+* Always show Stardust when you are away from Lizard Smoothie merchant
+* Show/Hide Hero Detail Menu Elements (Shadow, Background Box, Border, Lock Button)
 * Show/Hide Individual Stats (Health, Armor, AD, AP, etc.)
 * Controller Support (Keep hero detail menu open if lock is selected)
 

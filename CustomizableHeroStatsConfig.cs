@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CustomizableHeroStats
 {
@@ -12,8 +11,12 @@ namespace CustomizableHeroStats
     
     public class CustomizableHeroStatsConfig : ModConfig
     {
+        [Header("General Settings")]
         [LabelText("Show Hero Stats at Start")] [Description("Hero stats will start open at the start of each run. You can still toggle them off mid run.")]
         public bool startOpen = true;
+        
+        [LabelText("Always Show Stardust")] [Description("Always keep the amount stardust visible under the player's health bar.")]
+        public bool alwaysShowStardust = true;
         
         [Space(40)]
         
