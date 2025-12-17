@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\bin\Debug\netstandard2.1\AlwaysShowHeroStats.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\bin\Debug\netstandard2.1\AlwaysShowHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\bin\Debug\netstandard2.1\AlwaysShowHeroStats.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\obj\Debug\netstandard2.1\AlwaysShowHeroStats.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\obj\Debug\netstandard2.1\AlwaysShowHeroStats.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\obj\Debug\netstandard2.1\AlwaysShowHeroStats.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\obj\Debug\netstandard2.1\AlwaysShowHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\AlwaysShowHeroStats\obj\Debug\netstandard2.1\AlwaysShowHeroStats.pdb

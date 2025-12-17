@@ -1,0 +1,17 @@
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\bin\Debug\netstandard2.1\CustomizableHeroStats.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\bin\Debug\netstandard2.1\CustomizableHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\bin\Debug\netstandard2.1\CustomizableHeroStats.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\obj\Debug\netstandard2.1\CustomizableHeroStats.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\obj\Debug\netstandard2.1\CustomizableHeroStats.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\obj\Debug\netstandard2.1\CustomizableHeroStats.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\obj\Debug\netstandard2.1\CustomizableHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\CustomizableHeroStats\obj\Debug\netstandard2.1\CustomizableHeroStats.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\bin\Debug\netstandard2.1\CustomizableHeroStats.deps.json
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\bin\Debug\netstandard2.1\CustomizableHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\bin\Debug\netstandard2.1\CustomizableHeroStats.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.sourcelink.json
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.dll
+C:\Program Files (x86)\Steam\steamapps\common\Shape of Dreams\Mods\customizable-hero-stats\obj\Debug\netstandard2.1\CustomizableHeroStats.pdb

@@ -1,0 +1,12 @@
+{
+  "id": "com.projectcuriosity.customizableherostats",
+  "name": "Customizable Hero Stats",
+  "author": "ProjectCuriosity",
+  "modVer": "1.0",
+  "supportedGameVer": [
+    "*"
+  ],
+  "assemblies": [
+    "bin/Debug/netstandard2.1/*.dll"
+  ]
+}
