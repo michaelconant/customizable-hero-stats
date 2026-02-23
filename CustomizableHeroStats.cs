@@ -24,6 +24,14 @@ namespace CustomizableHeroStats
             Debug.Log("[" + mod.metadata.name + "] Hello! I'm loaded!");
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(config.toggleKey))
+            {
+                heroDetailMenu.alwaysShowToggle.isChecked = !heroDetailMenu.alwaysShowToggle.isChecked;
+            }
+        }
+        
         private void OnDestroy()
         {
             harmony.UnpatchAll();
